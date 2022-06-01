@@ -9,6 +9,7 @@
 - `git add .` *(Ajout d'une modification)*
 - `git commit -m "exemple"` *(Ajout d'un commit avec informations)*
 - `git push` *(Ajout de cette modification sur la branche)*
+- `git push -u origin branche_Tom` *(Ajout de la branche branche_Tom)*
 - `git checkout main` *(Replacement sur la branche principal)*
 - `git merge branche_Tom` *(Fusion sans conflit avec la branche principal)*
 - `git log` *(Informations sur les derniers commit)*
