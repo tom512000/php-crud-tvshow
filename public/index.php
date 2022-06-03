@@ -7,6 +7,7 @@ namespace public;
 use Siko0001\PhpCrudTvshow\Entity\Collection\CollectionTvShow;
 use Siko0001\PhpCrudTvshow\Html\WebPage;
 use Siko0001\PhpCrudTvshow\Html\AppWebPage;
+use Siko0001\PhpCrudTvshow\Entity\TvShow;
 
 $titre = "Série TV";
 $webPage = new AppWebPage($titre);
