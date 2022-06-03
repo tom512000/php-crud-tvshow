@@ -9,9 +9,10 @@
         }
     },
     "require": {
+        "ext-ctype": "*",
         "ext-pdo": "*"
     },
     "scripts": {
-        "run-server:win" : ["Composer\\Config::disableProcessTimeout", "bin/run-server.bat"]
+        "run-server:win" : ["Composer\\Config::disableProcessTimeout", "vendor/bin/run-server.bat"]
     }
 }

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Database\MyPdo;
-use Html\WebPage;
+use Siko0001\PhpCrudTvshow\Html\WebPage;
 
 if (!isset($_GET["idtvshow"]) || (!ctype_digit($_GET["idtvshow"]))) {
     header('Location: /index.php');
