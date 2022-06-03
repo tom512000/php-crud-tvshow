@@ -17,7 +17,7 @@ foreach ($tvshow as $element) {
     $nom = WebPage::escapeString($element->getName());
     $id = WebPage::escapeString(strval($element->getId()));
     $description = WebPage::escapeString(strval($element->getOverview()));
-    $webPage->appendContent("<div class='element'><a href='tvshow.php?idtvshow=$id'>$nom</a><br>$description<br></div><br>\n");
+    $webPage->appendContent("<div class='element'><img src='css/default.png' alt='image par défaut'><a href='tvshow.php?idtvshow=$id'>&emsp;$nom<br>$description<br></div></a><br>\n");
 }
 
 echo $webPage->toHTML();
