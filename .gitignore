@@ -1,5 +1,3 @@
-*.swp
-*.tmp
-*~
-*.idea
-*vendor
+/.idea/
+/vendor/
+/.mypdo.ini
