@@ -35,6 +35,19 @@ body {
     overflow-y: scroll;
 }
 
+div {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+    padding: 2em;
+    border-style: groove;
+    border-radius: 10px 10px 10px 10px;
+    border-color: black;
+    background-color: #fff;
+    font-size: 20px;
+}
+
 .list {
     display: flex;
     flex-direction: column;
