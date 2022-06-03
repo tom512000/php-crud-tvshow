@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Html;
+namespace Siko0001\PhpCrudTvshow\Html;
 
 use DateTime;
 

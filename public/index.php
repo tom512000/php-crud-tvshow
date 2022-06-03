@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace public;
 
-use Collection\CollectionTvShow;
-use Html\WebPage;
-use Html\AppWebPage;
+use Siko0001\PhpCrudTvshow\Entity\Collection\CollectionTvShow;
+use Siko0001\PhpCrudTvshow\Html\WebPage;
+use Siko0001\PhpCrudTvshow\Html\AppWebPage;
 
 $titre = "Série TV";
 $webPage = new AppWebPage($titre);

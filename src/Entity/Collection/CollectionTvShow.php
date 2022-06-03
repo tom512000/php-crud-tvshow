@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Collection;
+namespace Siko0001\PhpCrudTvshow\Entity\Collection;
 
-use Database\MyPdo;
-use Entity\TvShow;
+use Siko0001\PhpCrudTvshow\Database\MyPdo;
+use Siko0001\PhpCrudTvshow\Entity\TvShow;
 use PDO;
 
 class CollectionTvShow
