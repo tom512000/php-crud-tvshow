@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace public;
 
+use Collection\CollectionTvShow;
 use Html\WebPage;
-use Entity\TvShow;
-use Entity\Collection\CollectionTvShow;
 
 $titre = "Série TV";
 $webPage = new WebPage($titre);

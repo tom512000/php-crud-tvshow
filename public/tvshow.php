@@ -33,7 +33,9 @@ try {
         ORDER BY seasonNumber
     SQL);
     $saisonSeries->execute([":id"=>$idtvshow]);
-
+    while (($saison = $saisonSeries->fetch()) !== false) {
+        echo "<p>$nom : {$saison['name']}</p><br>";
+    }
 
 } catch (\Entity\Exception\EntityNotFoundException) {
     return http_response_code(404);
