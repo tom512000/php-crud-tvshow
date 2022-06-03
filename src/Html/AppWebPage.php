@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Html;
 
-use DateTime;
-
 class AppWebPage extends WebPage
 {
     /**

@@ -4,19 +4,21 @@ declare(strict_types=1);
 
 namespace public;
 
-use Entity\Collection\ArtistCollection;
-use Html\AppWebPage;
+use Collection\CollectionTvShow;
 use Html\WebPage;
+use Html\AppWebPage;
 
-$appWebPage = new AppWebPage();
-$appWebPage->setTitle('Artistes');
+$titre = "Série TV";
+$webPage = new AppWebPage($titre);
+$webPage->appendContent("<div class='header'><h1>$titre</h1></div>");
 
-$tab = ArtistCollection::findAll();
+$tvshow = CollectionTvShow::findAll();
 
-for ($i = 0; $i < count($tab); $i++) {
-    $name = WebPage::EscapeString($tab[$i]->getName());
-    $id = $tab[$i]->getId();
-    $appWebPage->appendContent("<p><a href='/artist.php?artistId=$id'>$name</a></p>\n");
+foreach ($tvshow as $element) {
+    $nom = WebPage::escapeString($element->getName());
+    $id = WebPage::escapeString(strval($element->getId()));
+    $description = WebPage::escapeString(strval($element->getDescription()));
+    $webPage->appendContent("<div class='element'><a href='tvshow.php?idtvshow=$id'>$nom</a><br>$description<br></div><br>\n");
 }
 
-echo $appWebPage->toHTML();
+echo $webPage->toHTML();
