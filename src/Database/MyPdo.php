@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Database;
+namespace Siko0001\PhpCrudTvshow\Database;
 
 use PDO;
 use PDOException;

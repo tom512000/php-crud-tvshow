@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-use Database\MyPdo;
-use Siko0001\PhpCrudTvshow\Html\WebPage;
+use Siko0001\PhpCrudTvshow\Database\MyPdo;
 
 if (!isset($_GET["idtvshow"]) || (!ctype_digit($_GET["idtvshow"]))) {
     header('Location: /index.php');
@@ -37,6 +36,6 @@ try {
         echo "<p>$nom : {$saison['name']}</p><br>";
     }
 
-} catch (\Entity\Exception\EntityNotFoundException) {
+} catch (\Siko0001\PhpCrudTvshow\Entity\Exception\EntityNotFoundException) {
     return http_response_code(404);
 }

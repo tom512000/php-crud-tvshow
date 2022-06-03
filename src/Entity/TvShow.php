@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Entity;
+namespace Siko0001\PhpCrudTvshow\Entity;
 
 class TvShow
 {

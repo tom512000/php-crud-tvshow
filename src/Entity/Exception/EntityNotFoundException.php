@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Entity\Exception;
+namespace Siko0001\PhpCrudTvshow\Entity\Exception;
 
 class EntityNotFoundException extends \OutOfBoundsException
 {
