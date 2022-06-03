@@ -42,10 +42,10 @@ div {
     width: auto;
     padding: 2em;
     border-style: groove;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 5px 5px 5px 5px;
     border-color: black;
-    background-color: #fff;
-    font-size: 20px;
+    background-color: #45a1ff;
+    font-size: 10px;
 }
 
 .list {
