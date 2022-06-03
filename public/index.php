@@ -9,9 +9,7 @@ use Siko0001\PhpCrudTvshow\Html\WebPage;
 use Siko0001\PhpCrudTvshow\Html\AppWebPage;
 use Siko0001\PhpCrudTvshow\Entity\TvShow;
 
-$titre = "Série TV";
-$webPage = new AppWebPage($titre);
-$webPage->appendContent("<div class='header'><h1>$titre</h1></div>");
+$webPage = new AppWebPage("Série TV");
 
 $tvshow = CollectionTvShow::findAll();
 
