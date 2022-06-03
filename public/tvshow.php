@@ -38,7 +38,7 @@ try {
     SQL);
     $saisonSeries->execute([":id"=>$idtvshow]);
     while (($saison = $saisonSeries->fetch()) !== false) {
-        $webPage->appendContent("<div class='element'><p>$nom : {$saison['name']}</p><br></div>");
+        $webPage->appendContent("<div class='element'><p><a href='tvshow.php?idtvshow=$id'>$nom : {$saison['name']}</a></p><br></div>");
     }
     echo $webPage->toHTML();
 
