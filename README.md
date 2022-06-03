@@ -42,3 +42,8 @@ ___php-crud-tvshow/___ (dossier racine) ↴
 
 ## Commandes :
 - `composer run-server:win` : lancement de l'**index.php** se trouvant dans le dossier public.
+
+## Répartition du travail :
+### Le travail rendu est réparti en 2 branches :
+- La branche `branche_Tom` est utilisée par Tom Sikora (siko0001).
+- La branche `serie` est utilisée par Tristan Romet (rome0019).

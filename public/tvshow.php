@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Siko0001\PhpCrudTvshow\Database\MyPdo;
+use Siko0001\PhpCrudTvshow\Html\AppWebPage;
 
 if (!isset($_GET["idtvshow"]) || (!ctype_digit($_GET["idtvshow"]))) {
     header('Location: /index.php');
@@ -19,9 +20,13 @@ try {
         WHERE id= :id
     SQL);
     $nomSeries->execute([":id"=>$idtvshow]);
-    $nom = $nomSeries->fetch()['name'];
-    $description = $nomSeries->fetch()['overview'];
-    echo "<p>$nom</p><br><p>$description</p>";
+    while (($ligne = $nomSeries->fetch()) !== false) {
+        $nom = AppWebPage::escapeString($ligne['name']);
+        $vrainom = AppWebPage::escapeString($ligne['originalName']);
+        $description = AppWebPage::escapeString($ligne['overview']);
+    }
+    $webPage = new AppWebPage("Série TV : $nom");
+    $webPage->appendContent("<div class='element'><img src='css/default.png' alt='image par défaut'>&emsp;<p>$nom</p><br><p class='barre'>&ensp;$vrainom</p><br><p class='barre'>&emsp;$description</p></div>");
 
     ////////////////////////////// SAISON SERIES ////////////////////////////////
     $saisonSeries = MyPdo::getInstance()->prepare(
@@ -33,8 +38,9 @@ try {
     SQL);
     $saisonSeries->execute([":id"=>$idtvshow]);
     while (($saison = $saisonSeries->fetch()) !== false) {
-        echo "<p>$nom : {$saison['name']}</p><br>";
+        $webPage->appendContent("<div class='element'><p>$nom : {$saison['name']}</p><br></div>");
     }
+    echo $webPage->toHTML();
 
 } catch (\Siko0001\PhpCrudTvshow\Entity\Exception\EntityNotFoundException) {
     return http_response_code(404);
