@@ -1,0 +1,64 @@
+html {
+    width:99.1%;
+    height:100%;
+}
+
+body {
+    width:100%;
+    height:98%;
+    display:flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: center;
+    background-color: #45a1ff;
+    color: #fff;
+    font-family: Marker Felt, fantasy;
+    font-style: inherit;
+    font-size: small;
+    text-align: center;
+    width:100%;
+    height:70px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width:100%;
+    background-color: #45a1ff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    font-family: Brandon Text,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+    font-style: inherit;
+    align-content: center;
+    width:100%;
+    height:100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: center;
+    background-color: #45a1ff;
+    color: #fff;
+    font-family: Marker Felt, fantasy;
+    font-style: italic;
+    font-size: small;
+    text-align: center;
+    width:100%;
+    height:50px;
+}
