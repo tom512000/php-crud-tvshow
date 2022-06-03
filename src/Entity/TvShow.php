@@ -42,6 +42,4 @@ class TvShow
     {
         return $this->originalName;
     }
-
-
 }
